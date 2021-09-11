@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>To-Do</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="heading">
+			<h1 class="header"> To Do. </h1>
+			<form class="item-add" action="index.php" method="post">
+				<input type="text" name="text" placeholder="Type your item here." class="task" autocomplete="off" required="">
+				<button type="submit" value="Add" class="task_btn" name="submit"> ADD Task </button>
+			</form>
+			<table>
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Task</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tr>
+					<td><?php echo $row['id']; ?></td>
+					<td class="task"><?php echo $row['task']; ?></td>
+					<td class="delete"><a href="#">x</a></td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>
